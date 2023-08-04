@@ -1,6 +1,7 @@
 # Part 1 - Java Refresher & Setup
 
-**Links**
+## Sections
+
 + [Lecture 1](Lecture1.md)
 + [Lecture 2](Lecture2.md)
 + [Lecture 3](Lecture3.md)

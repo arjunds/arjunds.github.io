@@ -1,6 +1,7 @@
 # Part 2 - Object Oriented Programming
 
-**Links**
+## Sections
+
 + [Lecture 4](Lecture4.md)
 + [Lecture 5](.)
 + [Lecture 6](.)
