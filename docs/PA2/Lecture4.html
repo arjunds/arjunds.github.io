@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Intro to CS | Lecture 4 - Object Oriented Programming (OOP)</title>
+  
+
+  
+
+  <link rel="stylesheet" href="/template-files/styles/main.css" media="all">
+  
+  
+  <link rel="stylesheet" href="./css/main.css" media="all">
+  
+  
+  
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <a class="site-title" href="">
+        Intro to CS
+      </a>
+
+      
+      <nav class="site-nav">
+        <a href="#" class="menu-icon" aria-label="Menu">
+          <svg viewBox="0 0 18 15">
+            <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+            <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+            <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+          </svg>
+        </a>
+      </nav>
+      
+    </div>
+  </header>
+
+<div class="page-content">
+  <div class="wrapper">
+
+    
+    <div class="nav-screen"></div>
+    <nav class="nav-list"><ul><li><a href="">Syllabus - A Crash Course to Programming</a></li><li><a href="/PA1">Part 1 - Java Refresher and Setup</a><ul><li><a href="/PA1/Lecture1">Lecture 1 - Java Refresher</a></li><li><a href="/PA1/Lecture2">Lecture 2 - Strings and Scope</a></li><li><a href="/PA1/Lecture3">Lecture 3 - Setup & Running Code</a></li><li><a href="/PA1/A1">Assignment 1 - String Builder</a></li></ul></li><li><a href="/PA2">Part 2 - Object Oriented Programming</a><ul><li><a href="/PA2/Lecture4" class="current-page">Lecture 4 - Object Oriented Programming (OOP)</a></li></ul></li></ul></li></nav>
+    
+
+    <div class="page-content-main">
+      <article class="post">
+        <header class="post-header">
+          
+          <h1 class="post-title">Lecture 4 - Object Oriented Programming (OOP)</h1>
+        </header>
+
+        
+        <div>
+          <p><strong>Page Content</strong></p>
+          <div class="section-nav"><ul class="toc"><li><a href="#what-is-oop">What is OOP?</a></li><li><a href="#what-are-objects">What are Objects?</a><ul><li><a href="#implementingusing-classes-objects">Implementing/Using Classes & Objects</a></li></ul></li></ul></div>
+        </div>
+        
+
+        <div class="post-content"><h1 id="what-is-oop">What is OOP?</h1>
+<p>OOP is a common programming practice, or paradigm, where a program is separated into objects that each contain specific traits (fields) and actions (methods) that you can perform on them. A complete program would be multiple of these objects stitched together, instantiated from the main method.</p>
+<p>There are many languages that are object-oriented, Java being one of them. However, there are still a few common languages that aren&#39;t object-oriented. We&#39;ll talk more about the tradeoffs between OOP and other language paradigms later, but for now let&#39;s better understand how OOP looks in Java.</p>
+<h1 id="what-are-objects">What are Objects?</h1>
+<p>So our basic premise of OOP is that we need to be able to divide our program into <em>distinct</em> functionalities, or these objects. But before we get into objects specifically, we need to talk about classes.</p>
+<p>Remember how in the last lecture and first assignment, we had a line in our java files saying <code>public class</code> followed by <code>HelloWorld</code> or <code>A1</code>? Well, these are classes. A class is just a collection of java information. It can hold some variables, some functions. Everything you write in Java <strong>must</strong> be encapsulated in a class structure. This seems kind of confusing though - what are objects then and what are these classes used for?</p>
+<p>Well, objects are instantiations of a class. It&#39;s like how dogs are animals, and all dogs can cuddle and play fetch, but then you have a specific representation of a dog - your pet or your neighbors pet. This specific dog still cuddles and fetches, but now has a specific species and name. This might seem super hand-wavy so let&#39;s think about an example you&#39;ve seen before: Java Strings</p>
+<p>Java Strings are actually just Objects! All Strings have certain capabilities that you can do (remember the methods you looked at in the String API from PA1), but what&#39;s the purpose of doing <code>length()</code> on a &quot;<code>String</code>&quot;? It doesn&#39;t really have a meaning. You want to have a String-typed variable with a value to call the <code>length()</code> method on. Strings are a Java class, and any String you create is an Object.</p>
+<p>So to summarize, at their core, Objects are just concrete implementations of Classes, which are in turn just a collection of attributes and methods. But reading all this text about them doesn&#39;t really help to understand how to create/use our own Classes and Objects. So let&#39;s try to figure that out.</p>
+<h2 id="implementingusing-classes--objects">Implementing/Using Classes &amp; Objects</h2>
+<p>Using our example of dogs, let&#39;s try to create a Dog class. First we need to specify that by creating a new file called <code>Dog.java</code> (as mentioned in the last lecture, filename should correspond to the class name). The initial lines we put in the file are:</p>
+<pre><code class="language-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> </span>{
+
+}</code></pre>
+<p>to indicated that we have a class called <code>Dog</code>. Now, all dogs have certain traits. These might be unique to each dog, but they&#39;re things that <strong>all</strong> dogs have. For example, all dogs have a species, a name, or an age. These are all fields - traits that are global to dogs.</p>
+<pre><code class="language-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> </span>{
+    String species;
+    String name;
+    <span class="hljs-keyword">int</span> age;
+}</code></pre>
+<p>We define fields outside of any functions, inside of the class. Remember variable scope? Declaring it just inside the class means that we can use these traits throughout the <code>Dog</code> class.</p>
+<p>Dogs also have actions that they all perform. These can be cuddling, fetching, or barking. These are methods that we can define. Methods, also known as functions, are blocks of code that perform very specific tasks. They can optionally return a value, and can take in parameters. Lets see what this looks like in our <code>Dog</code> class:</p>
+<pre><code class="language-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> </span>{
+    String species;
+    String name;
+    <span class="hljs-keyword">int</span> age;
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">bark</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">"Woof"</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">fetch</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setName</span><span class="hljs-params">(String name)</span> </span>{
+        <span class="hljs-keyword">this</span>.name = name;
+    }
+}</code></pre>
+<p>So here we&#39;ve introduced a lot. Let&#39;s break it down.</p>
+<p>The first two methods, <code>bark()</code> and <code>fetch()</code> are fairly straightforward. We can return a value by specifying before the function name what the return type is (ie <code>int</code> for <code>fetch</code>). If there is no return value, we use the keyword <code>void</code>, like I did for <code>bark</code>.
+Note: Returning and printing are not the same thing. <code>bark()</code> prints out to the command line, but when we call <code>fetch()</code> it actually returns a usuable value that we can then save into a variable, use in a conditional, etc. We&#39;ll see more examples of this later on.</p>
+<p>The final method, <code>setName()</code> takes in a parameter <code>name</code>. For parameters in Java, we need to specify what type they are. This method updates the global field <code>name</code> with the parameter <code>name</code>. If you remember variable scope, the parameter <code>name</code> takes precedence here. Therefore, we need a way to be able to refer to the global trait.</p>
+<p>The <code>this</code> keyword does this. <code>this</code> refers to <em>any</em> global attribute or method of a class. I could do <code>this.species</code> anywhere in the <code>Dog</code> class, or <code>this.bark()</code>, and have access to the field and call the method. This is <strong>imperative</strong> to do to ensure that you are properly using the global attributes/functions. This code, for example, would just set the parameter <code>name</code> to be itself, without touching the global value at all.</p>
+<pre><code class="language-Java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setName</span><span class="hljs-params">(String name)</span> </span>{
+    name = name;
+}</code></pre>
+</div>
+      </article>
+
+      <footer class="site-footer">
+
+        
+
+        
+
+        
+
+      </footer>
+    </div>
+
+  </div>
+</div>
+
+<script src="/template-files/js/main.js"></script>
+
+
+</body>
+
+</html>

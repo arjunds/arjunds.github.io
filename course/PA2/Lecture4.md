@@ -1,12 +1,14 @@
-# Lecture 4 - Object Oriented Programming (OOP)
+---
+title: Lecture 4 - Object Oriented Programming (OOP)
+---
 
-## What is OOP?
+# What is OOP?
 
 OOP is a common programming practice, or paradigm, where a program is separated into objects that each contain specific traits (fields) and actions (methods) that you can perform on them. A complete program would be multiple of these objects stitched together, instantiated from the main method.
 
 There are many languages that are object-oriented, Java being one of them. However, there are still a few common languages that aren't object-oriented. We'll talk more about the tradeoffs between OOP and other language paradigms later, but for now let's better understand how OOP looks in Java.
 
-## What are Objects?
+# What are Objects?
 
 So our basic premise of OOP is that we need to be able to divide our program into *distinct* functionalities, or these objects. But before we get into objects specifically, we need to talk about classes.
 
