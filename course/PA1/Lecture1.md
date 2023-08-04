@@ -143,6 +143,7 @@ for (int i = 0; i < 10; i+=2) {
 This will initialize a new variable `i` to 0, then loop until `i` is greater than or equal to 10. Every iteration it increments `i` by 2.
 
 For loops can also be represented by a while loop - how do you think that could be?
+
 ***
 
 That concludes the basic programming fundamentals/syntax refresher - the next lecture will wrap it up with using Strings, variable scope, and actually running programs.
