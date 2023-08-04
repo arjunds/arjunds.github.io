@@ -1,8 +1,12 @@
 ---
 title: Lecture 3 - Setup & Running Code
+parent: Part 1 - Java Refresher & Setup
+nav_order: 3
 ---
 
-# Setup
+# Lecture 3 - Setup & Running Code
+
+## Setup
 
 So we learned some basic Java concepts, but now we actually want to put them to use. That means we need to run code. But before we can do that, we need to do some basic setup.
 
@@ -12,7 +16,7 @@ Now that we have VSCode setup, we can write the programs, but there's still one 
 
 Once everything is installed, we can finally make a simple program to get started.
 
-# Running Code
+## Running Code
 
 In the previous lectures we learned about different structures and concepts in Java, but how do we actually run any of this? We need something called a main method. A main method is a function all Java programs **must** have. When we run our program, Java will look for the main method and run it. All code we write must either be in the main method, or be called from the main method, otherwise it won't run.
 

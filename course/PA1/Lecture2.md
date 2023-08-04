@@ -1,8 +1,12 @@
 ---
 title: Lecture 2 - Strings and Scope
+parent: Part 1 - Java Refresher & Setup
+nav_order: 2
 ---
 
-# Strings
+# Lecture 2 - Strings and Scope
+
+## Strings
 
 Strings are a key part of any programming language. Being able to represent text is key to being able to make a program more user interactive. But how do we represent pieces of text in our programs? Java has a built in String type that falls under the "Object" class of non-primitives. What this String type does behind the scenes is just represent an array of `chars`. Because after all, a String is just a list of characters concatenate together. With this in mind, we can work with Strings as if they were just collections of characters - we can iterate through all their characters, we can access specific characters, and we can modify or delete characters.
 
@@ -24,7 +28,7 @@ This is also handy for printing out any variable, so that when you debug, you ca
 
 Since there's so much you can do with strings, I'm going to point you to the String API. APIs are collections of references that explain how to use a library or piece of code. The String     API will give detailed instructions on different methods you can call on a string along with examples. Learning how to read APIs is key to programming and will be very useful for the first PA. The Java String API can be found [here](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html)
 
-# Scope
+## Scope
 
 The other part to this short lecture is variable scope. We learned about defining and using variables, but how long can we actually access them for? The simple answer to that is until the end of their corresponding curly bracket. But what does that actually mean?
 

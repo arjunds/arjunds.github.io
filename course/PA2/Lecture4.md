@@ -1,5 +1,7 @@
 ---
 title: Lecture 4 - Object Oriented Programming (OOP)
+parent: Part 2 - Object Oriented Programming
+nav_order: 1
 ---
 
 # What is OOP?
@@ -67,7 +69,9 @@ public class Dog {
 So here we've introduced a lot. Let's break it down.
 
 The first two methods, `bark()` and `fetch()` are fairly straightforward. We can return a value by specifying before the function name what the return type is (ie `int` for `fetch`). If there is no return value, we use the keyword `void`, like I did for `bark`.
-Note: Returning and printing are not the same thing. `bark()` prints out to the command line, but when we call `fetch()` it actually returns a usuable value that we can then save into a variable, use in a conditional, etc. We'll see more examples of this later on.
+
+{: .note }
+Returning and printing are not the same thing. `bark()` prints out to the command line, but when we call `fetch()` it actually returns a usuable value that we can then save into a variable, use in a conditional, etc. We'll see more examples of this later on.
 
 The final method, `setName()` takes in a parameter `name`. For parameters in Java, we need to specify what type they are. This method updates the global field `name` with the parameter `name`. If you remember variable scope, the parameter `name` takes precedence here. Therefore, we need a way to be able to refer to the global trait.
 

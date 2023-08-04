@@ -1,12 +1,16 @@
 ---
 title: Lecture 1 - Java Refresher
+parent: Part 1 - Java Refresher & Setup
+nav_order: 1
 ---
+
+# Lecture 1 - Java Refresher
 
 Initially, we will use Java as the basis for learning programming concepts. Java has a fairly mild learning curve, is similar to many other languages, and provides a good baseline for a first language to learn. It is also fairly commonly used in practice, though the use cases tend to vary and other languages have taken over some of the common applications of Java, for reasons I'll discuss towards the end of the course.
 
 However, the key takeaway shouldn't be to tie yourself to a specific language. Almost all languages share similar ideas, concepts, and constructs, and learning Java should hopefully enable you to use other languages as well with a little amount of Google/ChatGPT.
 
-# Variables/Typing
+## Variables/Typing
 
 To begin this quick refresher, any programming language you use will have variables. Here are some examples of variables below:
 
@@ -39,11 +43,12 @@ int[] arr = new int[n]
 
 This would make an array of size `n`, where `n` in this instance is 3, but could be any integer value (user input, etc)
 
-**Note: Arrays are fixed length. This means that once I define an array of a certain size, I can't expand it from, say, 4 to 5 elements, or even contract it from 4 to 3. If I want to change the size, I have to create a new array of the desired size, and copy over elements from the existing array as needed.**
+{: .note }
+Arrays are fixed length. This means that once I define an array of a certain size, I can't expand it from, say, 4 to 5 elements, or even contract it from 4 to 3. If I want to change the size, I have to create a new array of the desired size, and copy over elements from the existing array as needed.
 
 The other type of non-primitive type in Java are classified as Objects. These have many names and different capabilities and limitations across different languages, but the key idea is that Objects can represent a consistent set of datatypes under one name. They're similar to arrays, except instead of only holding values of the same type, they can hold values of multiple different datatypes. We'll go into objects more in depth in the next set of lectures.
 
-# Conditionals
+## Conditionals
 
 Remember the primitives we just learned about - booleans? In all languages, there are statements called “Boolean expressions," which are just statements that evaluate to either true or false, meaning they evaluate to a Boolean. You can do something like `x < 5` or `y == 4`. One thing to note is that `=` is used for assigning values while `==` is used for comparing values. To check for values that aren't equal, you can do `!=`. If I want to combine Boolean expressions, I can use && to only return true if *both* expressions are true and `||` to return true if *either* expression is true. This can be chained for as many operations as you want. You can also do a negation with `!`, effectively inverting the expression to the opposite Boolean value.
 
@@ -84,7 +89,8 @@ switch (expression) {
 
 In this example, `expression` is what we want to decide execution based on. It could be a variable, a Boolean expression, or just a normal expression. `case1` and `case2` are 2 values that `expression` can take on that we care about. We can have as many of those "cases" as makes sense for the context of the `switch`. The optional `default` is there if `expression` takes a value other than `case1` or `case2` and we still want to do something.
 
-**Note: the `break` after each case in the `switch` is important. It tells the program that we are done with the switch statement and to exit it. If we removed the break, it would continue to compare `expression` to the remaining cases (and potentially run the `default` case)**
+{: .note }
+The `break` after each case in the `switch` is important. It tells the program that we are done with the switch statement and to exit it. If we removed the break, it would continue to compare `expression` to the remaining cases (and potentially run the `default` case)
 
 Let's look at an actual example of a `switch` statement. Say we have a string input from the user stored in `input` and we want to execute `statement1` when `input` is `CS` and execute `statement2` when it's `PA`. In the default case we execute `statement3`. This would look like:
 
@@ -102,7 +108,7 @@ switch (input) {
 }
 ```
 
-# Loops
+## Loops
 
 Loops are super useful for when we have code that runs multiple times until some condition is met. There are 2 main kinds of loops: `while` and `for`.
 

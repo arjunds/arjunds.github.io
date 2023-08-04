@@ -1,8 +1,15 @@
+---
+title: Part 2 - Object Oriented Programming
+has_children: true
+has_toc: false
+nav_order: 2
+---
+
 # Part 2 - Object Oriented Programming
 
-## Sections
+#### Table of Contents
 
-+ [Lecture 4](Lecture4.md)
-+ [Lecture 5](.)
-+ [Lecture 6](.)
-+ [Assignment 2](.)
+1. [Lecture 4](Lecture4.md)
+2. [Lecture 5](.)
+3. [Lecture 6](.)
+4. [Assignment 2](.)
