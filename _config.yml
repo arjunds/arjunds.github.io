@@ -21,7 +21,7 @@
 title: Intro to CS
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://arjunds.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-repository: arjunds/arjunds.github.ios
+repository: arjunds/arjunds.github.io
 description: ""
 
 # Build settings

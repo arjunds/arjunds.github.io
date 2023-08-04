@@ -1,6 +1,6 @@
 ---
 title: Syllabus - A Crash Course to Programming
-nav_order: 0
+nav_order: 1
 ---
 
 # Intro to CS
