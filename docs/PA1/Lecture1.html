@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Intro to CS | Lecture 1 - Java Refresher</title>
+  
+
+  
+
+  <link rel="stylesheet" href="/template-files/styles/main.css" media="all">
+  
+  
+  <link rel="stylesheet" href="./css/main.css" media="all">
+  
+  
+  
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <a class="site-title" href="">
+        Intro to CS
+      </a>
+
+      
+      <nav class="site-nav">
+        <a href="#" class="menu-icon" aria-label="Menu">
+          <svg viewBox="0 0 18 15">
+            <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+            <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+            <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+          </svg>
+        </a>
+      </nav>
+      
+    </div>
+  </header>
+
+<div class="page-content">
+  <div class="wrapper">
+
+    
+    <div class="nav-screen"></div>
+    <nav class="nav-list"><ul><li><a href="">Syllabus - A Crash Course to Programming</a></li><li><a href="/PA1">Part 1 - Java Refresher and Setup</a><ul><li><a href="/PA1/Lecture1" class="current-page">Lecture 1 - Java Refresher</a></li><li><a href="/PA1/Lecture2">Lecture 2 - Strings and Scope</a></li><li><a href="/PA1/Lecture3">Lecture 3 - Setup & Running Code</a></li><li><a href="/PA1/A1">Assignment 1 - String Builder</a></li></ul></li><li><a href="/PA2">Part 2 - Object Oriented Programming</a><ul><li><a href="/PA2/Lecture4">Lecture 4 - Object Oriented Programming (OOP)</a></li></ul></li></ul></li></nav>
+    
+
+    <div class="page-content-main">
+      <article class="post">
+        <header class="post-header">
+          
+          <h1 class="post-title">Lecture 1 - Java Refresher</h1>
+        </header>
+
+        
+        <div>
+          <p><strong>Page Content</strong></p>
+          <div class="section-nav"><ul class="toc"><li><a href="#variablestyping">Variables/Typing</a></li><li><a href="#conditionals">Conditionals</a></li><li><a href="#loops">Loops</a></li></ul></div>
+        </div>
+        
+
+        <div class="post-content"><p>Initially, we will use Java as the basis for learning programming concepts. Java has a fairly mild learning curve, is similar to many other languages, and provides a good baseline for a first language to learn. It is also fairly commonly used in practice, though the use cases tend to vary and other languages have taken over some of the common applications of Java, for reasons I&#39;ll discuss towards the end of the course.</p>
+<p>However, the key takeaway shouldn&#39;t be to tie yourself to a specific language. Almost all languages share similar ideas, concepts, and constructs, and learning Java should hopefully enable you to use other languages as well with a little amount of Google/ChatGPT.</p>
+<h1 id="variablestyping">Variables/Typing</h1>
+<p>To begin this quick refresher, any programming language you use will have variables. Here are some examples of variables below:</p>
+<p><code>int x = 5;</code></p>
+<p><code>boolean y = true;</code></p>
+<p><code>double z = 3.14;</code></p>
+<p><code>char a = &#39;a&#39;;</code></p>
+<p>Here, we’ve defined the variables <code>x</code> , <code>y</code> , <code>z</code> , and <code>a</code> to have different values. Variables <strong>must</strong> have a type, and these types are categorized into “primitive” data types and “non-primitive” data types. The terminology and categorization can vary from language to language, but the key idea is that there are certain “base” types that are always representable. In some languages you might not need to declare a type explicitly (such as how in Python, the type is tied to the value assigned, not the variable). In Java, however, variables are assigned a type and are held to those types.</p>
+<p>In Java, these types are <code>char</code> which represents a single character, <code>int</code> which represents an integer value (non-decimal), <code>boolean</code> which represents a true or false value, and then <code>double</code> which represents a decimal value. Some other variants you may come across are <code>byte</code> , <code>short</code> , and <code>long</code> which are for different sized integer values if you know you need to store smaller or larger values, and similarly <code>float</code> for smaller decimals.</p>
+<p>What are &quot;non-primitives&quot; then? These are more complex data types. A very common example of a non-primitive is an array. An array can store a defined number of items of the same datatype. I can make an array of any datatype, primitive or non-primitive. I can even make an array of arrays (and so on)!
+Here are some examples of using arrays:</p>
+<p><code>int[] arr = new int[5];</code> creates a new array of 5 ints that is empty
+<code>int[] arr = {1,2,3,4};</code> creates an array of 4 ints that has values already initialized</p>
+<p>To access an element from the array, I can do <code>arr[2]</code> to get the value <code>3</code>. Arrays use 0-indexing, meaning that the first element is the &quot;0th&quot; and it continues until <code>size-1</code>.</p>
+<p>You can also initialize a variable size array by doing:</p>
+<pre><code class="language-java"><span class="hljs-keyword">int</span> n = <span class="hljs-number">3</span>;
+<span class="hljs-keyword">int</span>[] arr = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n]</code></pre>
+<p>This would make an array of size <code>n</code>, where <code>n</code> in this instance is 3, but could be any integer value (user input, etc)</p>
+<p><strong>Note: Arrays are fixed length. This means that once I define an array of a certain size, I can&#39;t expand it from, say, 4 to 5 elements, or even contract it from 4 to 3. If I want to change the size, I have to create a new array of the desired size, and copy over elements from the existing array as needed.</strong></p>
+<p>The other type of non-primitive type in Java are classified as Objects. These have many names and different capabilities and limitations across different languages, but the key idea is that Objects can represent a consistent set of datatypes under one name. They&#39;re similar to arrays, except instead of only holding values of the same type, they can hold values of multiple different datatypes. We&#39;ll go into objects more in depth in the next set of lectures.</p>
+<h1 id="conditionals">Conditionals</h1>
+<p>Remember the primitives we just learned about - booleans? In all languages, there are statements called “Boolean expressions,&quot; which are just statements that evaluate to either true or false, meaning they evaluate to a Boolean. You can do something like <code>x &lt; 5</code> or <code>y == 4</code>. One thing to note is that <code>=</code> is used for assigning values while <code>==</code> is used for comparing values. To check for values that aren&#39;t equal, you can do <code>!=</code>. If I want to combine Boolean expressions, I can use &amp;&amp; to only return true if <em>both</em> expressions are true and <code>||</code> to return true if <em>either</em> expression is true. This can be chained for as many operations as you want. You can also do a negation with <code>!</code>, effectively inverting the expression to the opposite Boolean value.</p>
+<p>Outside of these &quot;logical operations&quot; there are also normal numerical operations. Addition(+), subtraction(-), division(/), multiplication(*), and modulus(%) are natively supported, along with in place incrementation(++) and decrementation(<code>—-</code>). For a more detailed guide on all valid operations, check out this <a href="https://www.w3schools.com/java/java_operators.asp">link</a>.</p>
+<p>This all might seem super arbitrary, so let&#39;s see how it&#39;s useful: conditionals.</p>
+<p>Conditionals allow us to decide what to do based on an expression. The 2 forms of conditionals in most languages are <code>if</code> and <code>switch</code>. If statements take a Boolean expression as such: <code>if(x &lt;= 4)</code> or <code>if(y != 1 &amp;&amp; z &gt; 5)</code> and if it&#39;s true, it proceeds to run the specified code. If it&#39;s false, it looks for an <code>else if</code> or <code>else</code> statement. Else ifs are just secondary conditions that are <em>only</em> checked if the initial if statement is false. Else statements are <em>always</em> run if all <code>if</code> and <code>else if</code> statements are false. Therefore, you must have an <code>if</code> for both <code>else if</code> and <code>else</code>, but an <code>if</code> can be on it&#39;s own. This is all fairly logical - we can think of it in words as &quot;if something happens, do <em>this</em>, else if this other thing happens, do <em>something else</em>, or if neither of those happened, do <em>that thing</em>&quot;
+In a very general sense in code, this looks like:</p>
+<pre><code class="language-Java"><span class="hljs-keyword">if</span> (expression1) {
+    statements;
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (expression2) {
+    statements;
+} … <span class="hljs-comment">// as many else ifs as you want</span>
+<span class="hljs-keyword">else</span> {
+    statements;
+}</code></pre>
+<p>Another type of conditional is a <code>switch</code> statement. Instead of using Boolean expressions, it decides what to execute based on a value. This is useful when you want to do something based on a variable that can take multiple values. An example might be if you want to do something if a user enters a specific character - say continue on <code>&#39;c&#39;</code> or quit on <code>&#39;q&#39;</code>. You can also specify a default case if you choose to.
+Switch statements look like:</p>
+<pre><code class="language-Java"><span class="hljs-keyword">switch</span> (expression) {
+    <span class="hljs-keyword">case</span> case1:
+        statements;
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> case2:
+        statements;
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">default</span>:
+        statements;
+        <span class="hljs-keyword">break</span>;
+}</code></pre>
+<p>In this example, <code>expression</code> is what we want to decide execution based on. It could be a variable, a Boolean expression, or just a normal expression. <code>case1</code> and <code>case2</code> are 2 values that <code>expression</code> can take on that we care about. We can have as many of those &quot;cases&quot; as makes sense for the context of the <code>switch</code>. The optional <code>default</code> is there if <code>expression</code> takes a value other than <code>case1</code> or <code>case2</code> and we still want to do something.</p>
+<p><strong>Note: the <code>break</code> after each case in the <code>switch</code> is important. It tells the program that we are done with the switch statement and to exit it. If we removed the break, it would continue to compare <code>expression</code> to the remaining cases (and potentially run the <code>default</code> case)</strong></p>
+<p>Let&#39;s look at an actual example of a <code>switch</code> statement. Say we have a string input from the user stored in <code>input</code> and we want to execute <code>statement1</code> when <code>input</code> is <code>CS</code> and execute <code>statement2</code> when it&#39;s <code>PA</code>. In the default case we execute <code>statement3</code>. This would look like:</p>
+<pre><code class="language-Java"><span class="hljs-keyword">switch</span> (input) {
+    <span class="hljs-keyword">case</span> <span class="hljs-string">"CS"</span>:
+        statement1;
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-string">"PA"</span>:
+        statement2;
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">default</span>:
+        statement3;
+        <span class="hljs-keyword">break</span>;
+}</code></pre>
+<h1 id="loops">Loops</h1>
+<p>Loops are super useful for when we have code that runs multiple times until some condition is met. There are 2 main kinds of loops: <code>while</code> and <code>for</code>.</p>
+<p>While loops are when you want to run some code until a condition is met. It works great when you have something being updated inside the loop and want to loop until that reaches a certain value or stops being a certain value. Because of this, while loops are extremely simple:</p>
+<pre><code class="language-Java"><span class="hljs-keyword">while</span> (expression) {
+    statements;
+}</code></pre>
+<p><code>expression</code> must be a Boolean expression, and if it never becomes <code>false</code> then you get an &quot;infinite loop&quot;. Be sure to keep an eye on this when writing while loops as it&#39;s a very common mistake to make (but can be hard to figure out)!</p>
+<p>The other kind of loop is a for loop. For loops are perfect when you want to iterate a specific number of times. This could be to go through the contents of an array, or to effectively be a counter. The syntax is slightly more complicated but still fairly straightforward.</p>
+<pre><code class="language-Java"><span class="hljs-keyword">for</span> (initialization; condition; update) {
+    statements;
+}</code></pre>
+<p><code>Initialization</code> is where you initialization the counter variable just as you would any other variable. <code>condition</code> is the condition for stopping the loop. This doesn&#39;t need to use the counter variable, but it&#39;s extremely good practice to do so outside of very niche situations. <code>update</code> is called at the end of each loop iteration and updates the counter variable as you choose.</p>
+<p>A <code>for</code> loop to count every even number up to, but not including 10, would look like this:</p>
+<pre><code class="language-Java"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i+=<span class="hljs-number">2</span>) {
+    <span class="hljs-comment">// do something with i here</span>
+}</code></pre>
+<p>This will initialize a new variable <code>i</code> to 0, then loop until <code>i</code> is greater than or equal to 10. Every iteration it increments <code>i</code> by 2.</p>
+<p>For loops can also be represented by a while loop - how do you think that could be?</p>
+<hr>
+<p>That concludes the basic programming fundamentals/syntax refresher - the next lecture will wrap it up with using Strings, variable scope, and actually running programs.</p>
+</div>
+      </article>
+
+      <footer class="site-footer">
+
+        
+
+        
+
+        
+
+      </footer>
+    </div>
+
+  </div>
+</div>
+
+<script src="/template-files/js/main.js"></script>
+
+
+</body>
+
+</html>
