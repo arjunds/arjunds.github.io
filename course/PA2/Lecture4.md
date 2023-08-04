@@ -26,7 +26,7 @@ So to summarize, at their core, Objects are just concrete implementations of Cla
 
 Using our example of dogs, let's try to create a Dog class. First we need to specify that by creating a new file called `Dog.java` (as mentioned in the last lecture, filename should correspond to the class name). The initial lines we put in the file are:
 
-```Java
+```java
 public class Dog {
 
 }
@@ -34,7 +34,7 @@ public class Dog {
 
 to indicated that we have a class called `Dog`. Now, all dogs have certain traits. These might be unique to each dog, but they're things that **all** dogs have. For example, all dogs have a species, a name, or an age. These are all fields - traits that are global to dogs.
 
-```Java
+```java
 public class Dog {
     String species;
     String name;
@@ -46,7 +46,7 @@ We define fields outside of any functions, inside of the class. Remember variabl
 
 Dogs also have actions that they all perform. These can be cuddling, fetching, or barking. These are methods that we can define. Methods, also known as functions, are blocks of code that perform very specific tasks. They can optionally return a value, and can take in parameters. Lets see what this looks like in our `Dog` class:
 
-```Java
+```java
 public class Dog {
     String species;
     String name;
@@ -77,7 +77,7 @@ The final method, `setName()` takes in a parameter `name`. For parameters in Jav
 
 The `this` keyword does this. `this` refers to *any* global attribute or method of a class. I could do `this.species` anywhere in the `Dog` class, or `this.bark()`, and have access to the field and call the method. This is **imperative** to do to ensure that you are properly using the global attributes/functions. This code, for example, would just set the parameter `name` to be itself, without touching the global value at all.
 
-```Java
+```java
 void setName(String name) {
     name = name;
 }

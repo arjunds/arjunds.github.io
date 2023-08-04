@@ -12,7 +12,7 @@ Strings are a key part of any programming language. Being able to represent text
 
 A basic example of creating a String looks like:
 
-```Java
+```java
 String s = "Hello World!";
 ```
 
@@ -20,7 +20,7 @@ To print a String in Java, we can use the line `System.out.println();` to print 
 
 So to print our string `s`, we can do
 
-```Java
+```java
 System.out.println(s);
 ```
 
@@ -34,7 +34,7 @@ The other part to this short lecture is variable scope. We learned about definin
 
 If I have the following code:
 
-```Java
+```java
 int x = 0;
 if (x == 0) {
     int y = 3;
@@ -45,7 +45,7 @@ Trying to access `y` outside of the `if` would result in an error. This is becau
 
 This makes logical sense since we should only be able to access something within the area it was defined for, or it's scope. But when can this be an issue? Take a look at the following code snippet:
 
-```Java
+```java
 int x = 0;
 if (x == 0) {
     int x = 3;

@@ -22,7 +22,7 @@ In the previous lectures we learned about different structures and concepts in J
 
 What does the main method look like? It's very straightforward actually:
 
-```Java
+```java
 public static void main(String[] args) {
     // code goes here
 }
@@ -32,7 +32,7 @@ In our first assignment we'll just be writing all our code here, but as we progr
 
 So let's go ahead and write a very basic program - print "Hello World!". Create a new file called `HelloWorld.java` and put the following code in it:
 
-```Java
+```java
 import java.util.*;
 
 public class HelloWorld {

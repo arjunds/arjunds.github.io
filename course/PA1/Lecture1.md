@@ -59,7 +59,7 @@ This all might seem super arbitrary, so let's see how it's useful: conditionals.
 Conditionals allow us to decide what to do based on an expression. The 2 forms of conditionals in most languages are `if` and `switch`. If statements take a Boolean expression as such: `if(x <= 4)` or `if(y != 1 && z > 5)` and if it's true, it proceeds to run the specified code. If it's false, it looks for an `else if` or `else` statement. Else ifs are just secondary conditions that are *only* checked if the initial if statement is false. Else statements are *always* run if all `if` and `else if` statements are false. Therefore, you must have an `if` for both `else if` and `else`, but an `if` can be on it's own. This is all fairly logical - we can think of it in words as "if something happens, do *this*, else if this other thing happens, do *something else*, or if neither of those happened, do *that thing*"
 In a very general sense in code, this looks like:
 
-```Java
+```java
 if (expression1) {
     statements;
 } else if (expression2) {
@@ -73,7 +73,7 @@ else {
 Another type of conditional is a `switch` statement. Instead of using Boolean expressions, it decides what to execute based on a value. This is useful when you want to do something based on a variable that can take multiple values. An example might be if you want to do something if a user enters a specific character - say continue on `'c'` or quit on `'q'`. You can also specify a default case if you choose to.
 Switch statements look like:
 
-```Java
+```java
 switch (expression) {
     case case1:
         statements;
@@ -94,7 +94,7 @@ The `break` after each case in the `switch` is important. It tells the program t
 
 Let's look at an actual example of a `switch` statement. Say we have a string input from the user stored in `input` and we want to execute `statement1` when `input` is `CS` and execute `statement2` when it's `PA`. In the default case we execute `statement3`. This would look like:
 
-```Java
+```java
 switch (input) {
     case "CS":
         statement1;
@@ -114,7 +114,7 @@ Loops are super useful for when we have code that runs multiple times until some
 
 While loops are when you want to run some code until a condition is met. It works great when you have something being updated inside the loop and want to loop until that reaches a certain value or stops being a certain value. Because of this, while loops are extremely simple:
 
-```Java
+```java
 while (expression) {
     statements;
 }
@@ -124,7 +124,7 @@ while (expression) {
 
 The other kind of loop is a for loop. For loops are perfect when you want to iterate a specific number of times. This could be to go through the contents of an array, or to effectively be a counter. The syntax is slightly more complicated but still fairly straightforward.
 
-```Java
+```java
 for (initialization; condition; update) {
     statements;
 }
@@ -134,7 +134,7 @@ for (initialization; condition; update) {
 
 A `for` loop to count every even number up to, but not including 10, would look like this:
 
-```Java
+```java
 for (int i = 0; i < 10; i+=2) {
     // do something with i here
 }
