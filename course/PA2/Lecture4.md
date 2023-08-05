@@ -124,4 +124,4 @@ So this main method creates a new dog. Notice that this is just like creating an
 
 ***
 
-This was a quick, extensive rundown on how object oriented programming works. We went through what it is, how to implement classes, and how to actually use classes by instantiating objects. Next up, we'll be going over some Java semantics and syntax that directly tie into Classes and Objects
+This was a quick, extensive rundown on how object oriented programming works. We went through what it is, how to implement classes, and how to actually use classes by instantiating objects. Next up, we'll go over some Java semantics and syntax that directly tie into Classes and Objects
