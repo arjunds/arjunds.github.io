@@ -1,5 +1,5 @@
 ---
-title: Lecture 2 - Strings and Scope
+title: Lecture 2 - Strings & Scope
 parent: Part 1 - Java Refresher & Setup
 nav_order: 2
 ---

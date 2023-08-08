@@ -1,5 +1,5 @@
 ---
-title: Lecture 5 - OOP Semantics and Syntax
+title: Lecture 5 - OOP Semantics & Syntax
 parent: Part 2 - Object Oriented Programming
 nav_order: 2
 ---
