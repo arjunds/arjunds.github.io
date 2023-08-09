@@ -54,6 +54,45 @@ Depending on what parameters you pass into the `bark()` method when you call it,
 
 ## Why Use OOP?
 
+Object Oriented Programming has many benefits. It provides a clear structure in your program, delegates responsibility, and overall can be much more logical to read and write. All of these are encompassed by the programming principle, "Don't Repeat Yourself" (DRY). DRY promotes writing code that is logically separated so that each class and method provides functionality for a different task. You divide code into chunks so that each part can work individually and then combines seamlessly into a full program. This mentality ensures that every line of code you write is specific to the class or action you want it to do, and you reuse already written functions (or rewrite your code to avoid duplication) when you can.
+
 ## Inheritance
 
-Inheritance is probably one of the most important parts of OOP.
+Inheritance is probably one of the most important parts of OOP and fully embodies the idea of DRY. The base idea of inheritance is to promote code reusability by having "parent" classes. A class might share some traits with another class, but then have some additional features as well. For example our `Dog` class might share common features with an `Animal` class. In this case, `Dog` would be a "child" of `Animal`. Child classes *inherit* all the fields and methods of a parent class. Let's see what this looks like:
+
+```java
+public class Animal {
+    private String species; // all animals have a species
+    private int age; // all animals will have an age
+
+    public Animal(String species, int age) {
+        this.species = species;
+        this.age = age;
+    }
+
+    public boolean isAlive() {
+        return (age > 0 && age <= 100); // random metric I made up
+    }
+}
+
+public class Dog extends Animal {
+    private String breed; // breed is specific to a dog
+
+    public Dog (int age, String breed) {
+        super("Canis familiaris", age); // calls the parent class constructor
+        this.breed = breed;
+    }
+
+    @Override
+    public boolean isAlive() {
+        return (age > 0 && age <= 20); // random metric I made up
+    }
+}
+
+public static main(String[] args) {
+    Animal pet = new Dog(7, "Labrador");
+    System.out.println(pet.isAlive());
+}
+```
+
+So this is a large code snippet with a lot of new things. Let's slowly digest it. First of all, the `Animal` and `Dog` classes, and the `main()` method, would all be in different files, but are condensed here for simplicity. First, I define a class named `Animal`. It looks pretty standard - nothing new here. However, when I make the `Dog` class, it *extends* `Animal`. This means that `Animal` is a "superclass" (parent) of `Dog` (making `Dog` the "subclass", or child). Like I mentioned before, `Dog` now *inherits* all of the fields and methods of `Animal`, meaning I don't need to redefine the `species` or `age` fields. In Dog's constructor, I do `super("Canis familiaris", age);`. The `super` keyword basically just calls the superclass method. Here, it calls the constructor for the animal class, passing in the species for dogs, and the age from the `Dog` constructor. We still need to set the value of `breed` so we do that as well. This means that after the `Dog` constructor is called, all 3 fields are set.
