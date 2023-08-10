@@ -53,3 +53,8 @@ To compile our file, we can goto the terminal (bottom screen in VSCode) and run 
 ***
 
 With that, you should have enough info to get started on the first assignment. Because of the style of the course, the assignment writeups will conveyed through comments in the Java files, until they become too complicated for that. Take a look at `A1.java` to get started!
+
+<span class="fs-4" style="text-align:center; display:block">
+[Prev](Lecture2.md){: .btn .btn-blue}
+[Next](A1.md){: .btn .btn-blue .ml-2 }
+</span>

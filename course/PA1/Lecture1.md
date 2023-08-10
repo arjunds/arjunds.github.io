@@ -148,5 +148,7 @@ For loops can also be represented by a while loop - how do you think that could 
 
 That concludes the basic programming fundamentals/syntax refresher - the next lecture will wrap it up with using Strings, variable scope, and actually running programs.
 
-[Prev](index.md){: .btn .btn-blue .mx-auto }
-[Next](Lecture2.md){: .btn .btn-blue .mx-auto }
+<span class="fs-4" style="text-align:center; display:block">
+[Prev](index.md){: .btn .btn-blue}
+[Next](Lecture2.md){: .btn .btn-blue .ml-2 }
+</span>

@@ -125,3 +125,8 @@ So this main method creates a new dog. Notice that this is just like creating an
 ***
 
 This was a quick, extensive rundown on how object oriented programming works. We went through what it is, how to implement classes, and how to actually use classes by instantiating objects. Next up, we'll go over some Java semantics and syntax that directly tie into Classes and Objects
+
+<span class="fs-4" style="text-align:center; display:block">
+[Prev](index.md){: .btn .btn-blue}
+[Next](Lecture5.md){: .btn .btn-blue .ml-2 }
+</span>

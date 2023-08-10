@@ -118,3 +118,8 @@ Apart from code reusue, superclasses make inheritance a really useful through an
 ***
 
 So this was a lot. I'd recommend taking a short break to process this and maybe reread the part on inheritance again. There's a couple more nuances to inheritance, but we'll cover those in part 3 - this introduction provides a starting point to work off of. But this covers most of the main semantic and syntax nuances of Java - from here you're pretty much ready to start programming large scale programs! The next lecture, we'll go over ArrayLists and sorting.
+
+<span class="fs-4" style="text-align:center; display:block">
+[Prev](Lecture4.md){: .btn .btn-blue}
+[Next](Lecture6.md){: .btn .btn-blue .ml-2 }
+</span>

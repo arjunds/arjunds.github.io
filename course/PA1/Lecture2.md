@@ -60,5 +60,7 @@ It is actually. But then what happens if I try to access `x` in the if statement
 
 In the next lecture, we'll wrap up with setting up Java and VSCode, along with an understanding of compiling and running Java code.
 
-[Prev](Lecture1.md){: .btn .btn-blue .mx-auto }
-[Next](Lecture3.md){: .btn .btn-blue .mx-auto }
+<span class="fs-4" style="text-align:center; display:block">
+[Prev](Lecture1.md){: .btn .btn-blue}
+[Next](Lecture3.md){: .btn .btn-blue .ml-2 }
+</span>
