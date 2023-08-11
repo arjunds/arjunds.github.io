@@ -12,4 +12,4 @@ nav_order: 3
 1. [Lecture 4](Lecture4.md)
 2. [Lecture 5](Lecture5.md)
 3. [Lecture 6](Lecture6.md)
-4. [Assignment 2](.)
+4. [Assignment 2](A2.md)
