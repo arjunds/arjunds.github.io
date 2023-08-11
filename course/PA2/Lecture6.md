@@ -56,6 +56,10 @@ public static void main(String[] args) {
 
 ```
 
-So here, we can see how much more ArrayLists can do over simple arrays. They're extrememly handy when you don't know how big you want your array to be, and know that it might expand/contract depending on the situation. You can read more on the ArrayList methods in the Java API [here](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html).
+So here, we can see how much more ArrayLists can do over simple arrays. They're extrememly handy when you don't know how big you want your array to be, and know that it might expand/contract depending on the situation. One thing to note is how we created an ArrayList. In between `<>`, we put the class that we want to store in the ArrayList. We learned that `int` is a primitive data type, so we have to use the Java class equivalent - `Integer`. They represent the same thing, but `Integer` is just used for situations like this where you need a non-primitive data type.
+
+You can read more on the ArrayList methods in the Java API [here](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html).
 
 ## Sorting
+
+The main purpose of introducing ArrayLists was partially to go over a very commonly used class in Java, but also to introduce sorting. The idea is very basic - take a list of data (let's say integers), and sort it in ascending order. There's many different ways to sort data, so we'll go over a few of them, along with ways to characterize performance of these sorting algorithms.
