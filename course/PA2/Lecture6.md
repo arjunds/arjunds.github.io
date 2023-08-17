@@ -62,4 +62,16 @@ You can read more on the ArrayList methods in the Java API [here](https://docs.o
 
 ## Sorting
 
-The main purpose of introducing ArrayLists was partially to go over a very commonly used class in Java, but also to introduce sorting. The idea is very basic - take a list of data (let's say integers), and sort it in ascending order. There's many different ways to sort data, so we'll go over a few of them, along with ways to characterize performance of these sorting algorithms.
+The main purpose of introducing ArrayLists was partially to go over a very commonly used class in Java, but also to segue into sorting. The idea is very basic - take a list of data (let's say integers), and sort it in ascending order. There's many different ways to sort data, so we'll go over a few of them, along with ways to characterize performance of these sorting algorithms.
+
+### Bubble Sort
+
+Bubble sort is the simplest sorting algorithm (but also one of the least efficient). It basically works in theory by looping through the list and comparing the current value and the next one. Whichever one is larger, you swap to ensure its on the right, effectively "bubbling" it to the right-side of the list. You keep doing this until the list is sorted - ie you don't have to make any swaps. Let's see this in an example.
+
+We have the list `[5, 2, 4, 6, 1]` which is clearly out of order. Bubble sort works by iterating through the list and simply ensuring that the largest number between a pair is on the right, stopping when we didn't swap any values. This is how our list would change in the first pass through it:
+
+<pre>[<mark>5, 2</mark>, 4, 6, 1] &rarr; [2, <b>5, 4</b>, 6, 1] &rarr; [2, 4, <b>5, 6</b>, 1] &rarr; [2, 4, 5, <b>6, 1</b>] &rarr; [2, 4, 5, 1, 6]</pre>
+
+Notice how since 5 and 6 don't swap, the list remains unchanged for two steps. Furthermore, it's only based on the current pair evaluated. Therefore, 1 is still in between 5 and 6. The algorithm would now go through the list again, making swaps as needed. We'll take a look at how another pass through would look like:
+
+`[2, 4, 5, 1, 6]` &rarr; `[2, 4, 5, 1, 6]`
