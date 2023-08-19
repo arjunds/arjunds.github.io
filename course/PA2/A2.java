@@ -68,6 +68,7 @@ public class A2 {
         System.out.println("Remove works on end of list case: " + (list.size() == 3 && list.indexOf(3) == -1 && list.get(3) == -1));
         list.remove(1);
         System.out.println("Remove only removes first instance: " + (list.size() == 2 && list.indexOf(1) == 1 && list.get(2) == -1));
+        System.out.println("Remove returns -1 on element not in list: " + (list.remove(5) == -1));
         list.clear();
         
         System.out.println("Clear works: " + (list.size() == 0 && list.isEmpty() == true));
