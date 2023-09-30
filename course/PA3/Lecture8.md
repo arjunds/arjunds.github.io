@@ -1,10 +1,10 @@
 ---
-title: Lecture 8 -
-parent: Part 3 - More Arrays
+title: Lecture 8 - Memory Models
+parent: Part 3 - Wrapping Up Basics
 nav_order: 2
 ---
 
-# Lecture 8 - 
+# Lecture 8 - Memory Models
 
 ***
 

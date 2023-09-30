@@ -1,10 +1,10 @@
 ---
-title: Lecture 7 - 
-parent: Part 3 - More Arrays
+title: Lecture 7 - Abstract Classes & Interfaces
+parent: Part 3 - Wrapping Up Basics
 nav_order: 1
 ---
 
-# Lecture 7 - 
+# Lecture 7 - Abstract Classes & Interfaces
 
 ***
 

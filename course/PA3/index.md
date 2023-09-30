@@ -1,11 +1,11 @@
 ---
-title: Part 3 - More Arrays
+title: Part 3 - Wrapping Up Basics
 has_children: true
 has_toc: false
 nav_order: 3
 ---
 
-# Part 3 - More Arrays
+# Part 3 - Wrapping Up Basics
 
 #### Table of Contents
 

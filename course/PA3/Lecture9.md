@@ -1,10 +1,10 @@
 ---
-title: Lecture 9 -
-parent: Part 3 - More Arrays
+title: Lecture 9 - Recursion
+parent: Part 3 - Wrapping Up Basics
 nav_order: 3
 ---
 
-# Lecture 9 -
+# Lecture 9 - Recursion
 
 ***
 
