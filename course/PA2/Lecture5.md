@@ -113,7 +113,13 @@ If `age` was `private` instead of `protected`, `Dog` would need to use the `getA
 
 Moving onto the methods, because they both are `public`, `Dog` can access both of them. However, Dog's have a different metric of how old they usually live. So here, we "override" the `isAlive()` method from `Animal`, updating it with a new body. `@Override` isn't strictly necessary, but helps to specify to the programmer and the compiler that we are overriding a superclass's method.
 
-Apart from code reusue, superclasses make inheritance a really useful through another semantic called "polymorphism". Polymorphism is the idea of having "many forms" – ie a superclass having many forms through its children. In our `main()` method, we define an `Animal` object, but create a new `Dog`. This is polymorphism - the program knows that Dogs come from Animals, and therefore share attributes and methods of Animals. Therefore, I can call `isAlive()` and `getAge()` because they both are attributes of `Animal`. However, by the same idea, I can't call the `getBreed()` method on `pet` because that is specific to `Dog`. The reason why polymorphism is so powerful is that I can have a method take in an `Animal`, and then pass in a `Dog`. Then when I call methods declared in `Animal`, it'll use overriden versions from `Dog`, if defined. So in our `main` method, it uses the `isAlive()` defined in the `Dog` class.
+## Polymorphism
+
+Apart from code reusue, superclasses make inheritance a really useful through another semantic called "polymorphism". Polymorphism is the idea of having "many forms" – ie a superclass having many forms through its children. In our `main()` method, we define an `Animal` object, but create a new `Dog`.
+
+This is polymorphism - the program knows that Dogs come from Animals, and therefore share attributes and methods of Animals. Therefore, I can call `isAlive()` and `getAge()` because they both are attributes of `Animal`. However, by the same idea, I can't call the `getBreed()` method on `pet` because that is specific to `Dog`.
+
+The reason why polymorphism is so powerful is that I can have a method take in an `Animal`, and then pass in a `Dog`. Then when I call methods declared in `Animal`, it'll use overriden versions from `Dog`, if defined. So in our `main` method, it uses the `isAlive()` defined in the `Dog` class.
 
 ***
 
