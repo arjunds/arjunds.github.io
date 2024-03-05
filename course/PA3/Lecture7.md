@@ -20,7 +20,98 @@ We'll see some code examples of how exactly this works.
 
 ## Using Abstract Classes
 
+```java
+public abstract class Animal {
+    protected int age;
+
+    public Animal(int age) {
+        this.age = age;
+    }
+
+    // abstract method doesn't have a body
+    public abstract boolean isAlive();
+}
+
+public class Dog extends Animal {
+    private String breed; // breed is specific to a dog
+
+    public Dog (int age, String breed) {
+        super(age); // calls the parent class constructor
+        this.breed = breed;
+    }
+
+    // define the body of the abstract method
+    @Override
+    public boolean isAlive() {
+        return (age > 0 && age <= 20); // random metric I made up
+    }
+
+    public String getBreed() {
+        return breed;
+    }
+}
+
+public static void main(String[] args) {
+    Animal generic = new Animal(10); // returns an error
+    Animal pet = new Dog(7, "Labrador");
+    System.out.println(pet.isAlive());
+}
+```
+
+This long code snippet is very similar to the one from Lecture 5, where we first learned about inheritance. However, the major difference here is that `Animal` is an `abstract` class. This means that you cannot instantiate an object of type `Animal`, as shown in the main method. Furthermore, `abstract` classes can have `abstract` methods. These methods have empty bodies, placing the responsibility of defining the method on the subclass. Here, `Dog` **must** define `isAlive()`, otherwise there would be an error.
+
+Next, we'll see how interfaces differ from abstract classes
+
+## Using Interfaces
+
+```java
+public interface Animal {
+    // interface methods don't have a body
+    public boolean isAlive();
+    public String getName();
+}
+
+// Dog now "implements" Animal
+public class Dog implements Animal {
+    // all of these fields are specific to Dog
+    private String breed;
+    private String name;
+    private int age;
+
+    public Dog (int age, String breed, String name) {
+        this.breed = breed;
+        this.age = age;
+        this.name = name;
+    }
+
+    // Fill the method body for isAlive
+    public boolean isAlive() {
+        return (age > 0 && age <= 20); // random metric I made up
+    }
+
+    // Fill the method body for getName
+    public String getName() {
+        return name;
+    }
+
+    public String getBreed() {
+        return breed;
+    }
+}
+
+public static void main(String[] args) {
+    Animal generic = new Animal(10); // returns an error
+    Animal pet = new Dog(7, "Labrador", "Buddy");
+    System.out.println(pet.isAlive());
+    System.out.println(pet.getName());
+}
+```
+
+Here, we can see that the main difference between abstract classes and interfaces is that interfaces are very generic. They **only** provide method headers, and it's up to the child class to actually implement it. This is extremely useful when you want to guarantee that a class has certain methods you can call on it, and just pass in the interface, ie `Animal`, to a function. Then, you know that certain methods can **always** be called on the parameter. Because there are no fields at all in an interface, they are a little more limited than abstract classes. However, because you can `implement` *as many* interfaces as you want, there's a lot of flexibility by using them, as opposed to only being able to `extend` one class.
+
 ***
+
+This lecture wrapped up the final two key parts of inheritance. We revisited how inheritance works in the context of abstract classes and interfaces, both of which force you to define method bodies in the subclass. The purpose of this is to ensure code security (only having code where you **need** to have it) and maintain that idea of `polymorphism` - having one type (such as `Animal`), take on multiple forms through its subclasses.
 
 <span class="fs-4" style="text-align:center; display:block">
 [Prev](index.md){: .btn .btn-blue}

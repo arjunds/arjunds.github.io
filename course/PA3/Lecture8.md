@@ -1,10 +1,10 @@
 ---
-title: Lecture 8 - Memory Models
+title: Lecture 8 - 2D Arrays
 parent: Part 3 - Wrapping Up Basics
 nav_order: 2
 ---
 
-# Lecture 8 - Memory Models
+# Lecture 8 - 2D Arrays
 
 ***
 
