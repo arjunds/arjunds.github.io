@@ -48,6 +48,24 @@ Arrays are fixed length. This means that once I define an array of a certain siz
 
 The other type of non-primitive type in Java are classified as Objects. These have many names and different capabilities and limitations across different languages, but the key idea is that Objects can represent a consistent set of datatypes under one name. They're similar to arrays, except instead of only holding values of the same type, they can hold values of multiple different datatypes. We'll go into objects more in depth in the next set of lectures.
 
+## Type Casting
+
+What if we want to go from one primitive data type to another? We can type cast. However, this may result in a loss of information, depending on what the types are. For example, a `short` is smaller than an `int`, so casting an `int` to a `short` would lose any data that doesn't "fit" in the `short` data type. In Java, a `short` has a max value of 32,767 which means that if you try to cast an `int` larger than that, it would cut off, or "truncate" the remainder. In practice it can be a little more complicated than this because of how computers store numbers in hardware, but that's potentially for a much later lesson. The key takeawys of type casting are that you usually should only cast to a larger size. For example, going from a `short` to an `int` will never cause any issues. Similarly, an `int` to a `double` would be fine. If you go from a decimal type like a `double` to a non decimal, everything after the decimal point is removed. This means that it **doesn't** round, but just keeps the integer part. Let's see some examples of how to type cast in Java.
+
+```java
+int a = 3;
+double b = a; // valid, casting to a larger type
+short c  = a; // error, can't implictly do this
+short d = (short) a; // valid, explicitly tell java we want to narrow the int to a short - may cause issues if the int is large
+double e = 3.5;
+int f = (int) e; // valid since we explicitly say we want to make `e` an int. `f` is 3 now because of the truncation
+int g = 1 / 2; // valid since 1 and 2 are both ints, resultant is 0 since it truncates to an int
+double h = 1 / 2; // this is actually 0.0 because again, 1 and 2 are both ints, so it does "integer division" resulting in 0, which is then widened to a double
+double i = 1.0 / 2; // because one of the numbers is a double, this will now return 0.5
+```
+
+There are a lot of nuances to type casting to remember. The Java compiler will remind you of the problematic ones (going from a large type to a small one implicitly), but the one you need to remember is integer division, and how even if you expect a decimal number, it'll truncate to an `int`.
+
 ## Conditionals
 
 Remember the primitives we just learned about - booleans? In all languages, there are statements called “Boolean expressions," which are just statements that evaluate to either true or false, meaning they evaluate to a Boolean. You can do something like `x < 5` or `y == 4`. One thing to note is that `=` is used for assigning values while `==` is used for comparing values. To check for values that aren't equal, you can do `!=`. If I want to combine Boolean expressions, I can use && to only return true if *both* expressions are true and `||` to return true if *either* expression is true. This can be chained for as many operations as you want. You can also do a negation with `!`, effectively inverting the expression to the opposite Boolean value.
