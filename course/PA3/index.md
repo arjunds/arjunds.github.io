@@ -2,7 +2,7 @@
 title: Part 3 - Wrapping Up Basics
 has_children: true
 has_toc: false
-nav_order: 3
+nav_order: 4
 ---
 
 # Part 3 - Wrapping Up Basics
