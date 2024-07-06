@@ -66,6 +66,7 @@ public class Stack {
     }
 
     // return -1 if the peek is unsuccessful (empty stack)
+    // also known as top
     public int peek() {
         if (numElements <= 0) {
             return -1;
@@ -78,6 +79,74 @@ public class Stack {
     }
 }
 ```
+
+This implementation is fairly straightforward. We use an array as the backend for our stack, which has a set size that we take in the constructor. When we `push()` an element, we increase the number of elements in the stack, and when we `pop()` we decrease it. `peek()` just returns the top value. We ensure we have checks to make sure that we aren't popping from an empty stack, or pushing to a full stack. Additionally, most data structures will have helper methods such as `isEmpty()` that allow you to easily query whether there's data or not.
+
+### Stack
+
+```java
+public class Queue {
+    private int[] queue;
+    private int size;
+    private int numElements;
+
+    public Queue(int size) {
+        this.queue = new int[size];
+        this.size = size;
+        this.numElements = 0;
+    }
+
+    // return true if the push was successful
+    // also known as enqueue
+    public boolean push(int value) {
+        if (numElements >= size) {
+            return false;
+        }
+        queue[numElements] = value;
+        numElements++;
+        return true;
+    }
+
+    // return -1 if the pop is unsuccessful (empty stack)
+    // also known as dequeue
+    public int pop() {
+        if (numElements <= 0) {
+            return -1;
+        }
+        
+        int front = queue[0];
+
+        // shift all the elements to the left by one
+        for (int i = 0; i < rear - 1; i++) {
+            queue[i] = queue[i + 1];
+        }
+
+        return front;
+    }
+
+    // return -1 if the peek is unsuccessful (empty stack)
+    // also known as front
+    public int peek() {
+        if (numElements <= 0) {
+            return -1;
+        }
+        return queue[numElements-1];
+    }
+
+    public boolean isEmpty() {
+        return numElements == 0;
+    }
+}
+```
+The main difference between a queue and a stack is just whether we remove from the "front" or the "back", when thinking about it as a linear array. With a stack, we remove from the back, since it's LIFO, so removal was as easy as removing the last element. With a queue being FIFO, we need to remove the 0th index element, and then shift the remaining elements forward by one. This is what the for loop in `pop()` is doing.
+
+This may seem pretty inefficient, so we'll see some better ways to implement a queue in the next section, using a technique called a Linked List.
+
+## Summary
+
+Overall, stacks and queues are pretty fundamental data structures that have important functions. The main reason we explicitly use a stack or a queue instead of just an array, is because these data structures **guarantee** certain functions, ie being LIFO or FIFO. Therefore, when we use them, we can automatically have certain assumptions about how the data goes in and out. This makes our life easier when we have code that use these data structures.
+
+Stacks and queues are used broadly throughout computer science with different use cases and contexts. We may introduce some of these scenarios later in the course, but for now it's good to keep them in mind as a straightforward way to manipulate data.
 
 ***
 
